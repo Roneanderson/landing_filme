@@ -1,0 +1,42 @@
+.plans {
+    position: relative;
+    
+    &__branding {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 170px;
+        padding: 56px 0 12px;
+        align-content: center;
+
+
+        &__content {
+            max-width: 341px;
+            min-width: 100px;
+            width: 35vw;
+            
+            img {
+                height: auto;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    &__portrait {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        align-items: center;
+
+        &__designer {
+            height: 20px;
+            vertical-align: sub;
+            display: inline-block;
+
+            .image {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
