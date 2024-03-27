@@ -1,3 +1,5 @@
+@use'variaveis';
+
 .plans {
     position: relative;
     
@@ -39,4 +41,19 @@
             }
         }
     }
+}
+
+.detalhes {
+    line-height: 1.4;
+    padding: 0 0 15px;
+    margin-top: 43px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: variaveis.$cordeTextoPrincipal;
+}
+
+.verso {
+    padding: 20px 0;
+    letter-spacing: 1.4;
+    padding-bottom: 80px;
 }

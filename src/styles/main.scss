@@ -6,40 +6,24 @@
 @use 'infor';
 
 
+/* importando fonte pelo elemento @font-face */
+
+@font-face {
+    font-family: Avenir sans-serif;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 600;
+}
+
+/* elementos reset da página */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: Avenir, sans-serif;
 }
 
-body {
-    background-color: variaveis.$cordeFundo;
-}
-
-.car {
-    font-size: 24px;
-    letter-spacing: .11px;
-    line-height: 1.2;
-    margin: 14px 0 0;
-    color: #000;
-}
-
-.detalhes {
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 0;
-    line-height: 1.4;
-    padding: 0 0 15px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    position: relative;
-    padding-top: 75px;
-}
-
-
-
+/* estilização do botao plans btn*/
 .btn {
     display: inline-flex;
     align-items: center;
@@ -52,7 +36,6 @@ body {
     border: 0;
     background-color: variaveis.$corPrincipalButton;
     border-radius: 0.25rem;
-    font-family: inherit;
     font-weight: 900;
     line-height: 1.5px;
     overflow: hidden;
@@ -63,24 +46,27 @@ body {
     margin-bottom: 32px;
 
 }
+
+/* estilização do botao plans btn hover */
 .btn:hover {
     background-color: variaveis.$corSecundarioButton;
     color: variaveis.$cordeTextoPrincipal;
 }
 
-@mixin text($fontSize: 14px) {
+
+/* estilização dos mixin */
+
+@mixin text($fontSize: 18px) {
     font-size: $fontSize;
     line-height: $fontSize + 1.5px;
     color: variaveis.$cordeTextoPrincipal;
 }
 
 
-@mixin title($fontSize: 24px) {
+@mixin title($fontSize: 20px) {
     font-size: $fontSize;
     color: variaveis.$cordeTextoPrincipal;
 }
-
-
 
 .text--small {
     @include text(12px);
@@ -88,60 +74,38 @@ body {
 }
 
 .text {
-    @include text(15px);
+    @include text(18px);
     color: variaveis.$cordeTextoPrincipal;
+}
+
+
+.text--regular {
+    @include text(18px);
+    color: variaveis.$cordeTexto;
 }
 
 .text--big {
-    @include text(40px);
-    color: variaveis.$cordeTextoPrincipal;
+    @include text(25px);
+    color: variaveis.$cordeTextoSecundario;
 }
 
-.title {
-    @include title(24px);
-    color: variaveis.$cordeTextoPrincipal;
-}
-
-
-.title--big {
-    @include title(32px);
-}
-
-
-.article {
-    display: flex;
-}
-
-
+/* estilização paragrafo do plans elemento detalhes / elemento linha*/
 .paragrafo {
-    max-width: 875px;
+    width: 875px;
     font-size: 20px;
     line-height: 1.6;
-}
-
-
-
-.paragrafo_1 {
-    font-size: 20px;
-    letter-spacing: -.1px;
-    line-height: 1.6;
-    margin: 0;
-    margin-block-end: 1em;
-    width: 100%;
-}
-
-.detail {
-    margin-top: 75px;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 0;
-    line-height: 1.4;
-    padding: 0 0 15px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    width: 70%;
 }
 
 .linha {
     border: 1px solid hsla(0, 0%, 98%, .5);
     margin: 0;
+}
+
+
+.titulo {
+    padding-top: 75px;
+    padding-bottom: 40px;
+    color: variaveis.$cordeTextoPrincipal;
 }

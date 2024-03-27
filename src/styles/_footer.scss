@@ -11,7 +11,8 @@
 
     &__logo {
         width: 80px;
-        margin: 0 auto 10px;
+        padding-top: 26px;
+        padding-bottom: 8px;
     }
 
     &__links {
@@ -23,7 +24,8 @@
 
         &__itens {
             display: inline-block;
-            margin: 5px;
+            margin: 15px;
+            justify-content: center;
 
             a {
                 text-decoration: none;
@@ -41,8 +43,3 @@
     }
 }
 
-.titulo {
-    padding-top: 75px;
-    padding-bottom: 75px;
-    color: variaveis.$cordeTextoPrincipal;
-}

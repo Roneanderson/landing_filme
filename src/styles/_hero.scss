@@ -1,3 +1,5 @@
+@use'variaveis';
+
 .hero {
     padding: 5.6vw;
     min-height: 80vh;
@@ -5,4 +7,14 @@
     background-size: cover;
     top: 0;
     left: 0;
+
+
+    .car {
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.2;
+        margin: 14px 0 0;
+        color: variaveis.$cordeTextoPrincipal;
+        text-transform: uppercase;
+    }
 }
