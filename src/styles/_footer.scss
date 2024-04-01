@@ -1,16 +1,18 @@
 @use 'variaveis';
 
 .footer {
+    background-color: variaveis.$corDeFundo;
     &__container {
-        max-width: 1024px;
+        max-width: 1524px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
         padding-bottom: 20px;
+        padding: 40px;
     }
 
     &__logo {
-        width: 80px;
+        width: 15vh;
         padding-top: 26px;
         padding-bottom: 8px;
     }
@@ -24,22 +26,23 @@
 
         &__itens {
             display: inline-block;
-            margin: 15px;
-            justify-content: center;
+            margin: 11px 5px 10px;
+            padding: 1px 6px;
+            line-height: 22px;
 
             a {
                 text-decoration: none;
-                padding: 8px 16px;
+                padding: 8px 8px;
                 
                 &:hover {
-                    color: variaveis.$corSecundarioButton;
+                    color: variaveis.$corDeFundoBotaoSecundario;
                 }
             }
         }
     }
 
     p {
-        margin-bottom: 16px;
+        margin-top: 8px;
     }
 }
 

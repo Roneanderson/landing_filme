@@ -1,3 +1,34 @@
-$(document).ready(function(){
-    $('.carousel').slick();
+document.addEventListener('DOMContentLoaded', function() {
+    $(document).ready(function() {
+        $('.carousel').slick();
+    })
+
+    //seção do header
+    const  heroButton = document.querySelector('button');
+    const alturaHero = heroButton.clientHeight;
+
+
+    window.addEventListener('scroll', function() {
+        const posicaoAtual = window.scrollY;
+
+        if (posicaoAtual < alturaHero) {
+            ocultaElementoDoHEader()
+        } else {
+            exibeElementosDoHeader();
+        }
+    })
+
+    function ocultaElementoDoHEader() {
+        const header = document.querySelector ('header');
+        header.classList.add('header--is-hidden');
+    }
+
+    function exibeElementosDoHeader() {
+        const header = document.querySelector ('header');
+        header.classList.remove('header--is-hidden');
+    }
 })
+
+
+
+

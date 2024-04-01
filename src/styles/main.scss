@@ -4,10 +4,10 @@
 @use 'carousel';
 @use 'footer';
 @use 'infor';
+@use 'header';
 
 
 /* importando fonte pelo elemento @font-face */
-
 @font-face {
     font-family: Avenir sans-serif;
     src: url(../../assets/fonts/Avenir-Bold.woff2);
@@ -15,7 +15,6 @@
 }
 
 /* elementos reset da página */
-
 * {
     margin: 0;
     padding: 0;
@@ -23,45 +22,12 @@
     list-style: none;
 }
 
-/* estilização do botao plans btn*/
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    cursor: pointer;
-    padding: 0 20px;
-    height: 56px;
-    color: variaveis.$cordeTextoPrincipal;
-    border: 0;
-    background-color: variaveis.$corPrincipalButton;
-    border-radius: 0.25rem;
-    font-weight: 900;
-    line-height: 1.5px;
-    overflow: hidden;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-top: 16px;
-    margin-bottom: 32px;
-
-}
-
-/* estilização do botao plans btn hover */
-.btn:hover {
-    background-color: variaveis.$corSecundarioButton;
-    color: variaveis.$cordeTextoPrincipal;
-}
-
-
 /* estilização dos mixin */
-
 @mixin text($fontSize: 18px) {
     font-size: $fontSize;
     line-height: $fontSize + 1.5px;
     color: variaveis.$cordeTextoPrincipal;
 }
-
 
 @mixin title($fontSize: 20px) {
     font-size: $fontSize;
@@ -78,10 +44,8 @@
     color: variaveis.$cordeTextoPrincipal;
 }
 
-
 .text--regular {
     @include text(18px);
-    color: variaveis.$cordeTexto;
 }
 
 .text--big {
@@ -96,6 +60,7 @@
     line-height: 1.6;
     letter-spacing: 1.4px;
     width: 70%;
+    padding: 25px 0px;
 }
 
 .linha {
@@ -108,4 +73,45 @@
     padding-top: 75px;
     padding-bottom: 40px;
     color: variaveis.$cordeTextoPrincipal;
+}
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-weight: 600;
+    font-size: 18px;
+    color: variaveis.$cordeTextoSecundario;
+    background-color: variaveis.$corDeFundoBotaoPrimario;
+    text-transform: uppercase;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+
+    &:hover {
+        background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+    }
+    
+    &--secondary {
+        background-color: variaveis.$corDeFundoBotaoSecundario;
+        border-color: variaveis.$corDeFundoBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$cordeDeFundoDark, 0.8);
+        border-color: variaveis.$cordeTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$cordeTextoSecundario;
+            color: variaveis.$corDeFundo;
+        }
+    }
 }
