@@ -5,15 +5,16 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-
-    @media (max-width: 767px) {
-        display: block;
-        background-color: green;
-    }
     
+    
+    @media (max-width: 768px) {
+        display: block;
+    }
+
     &__sobre {
         margin: 5px;
         font-family: sans-serif;
+
     }
 
     &__lista {
@@ -22,9 +23,7 @@
     }
 }
 
-
 /* estilização do logo do elemento infor sobre*/
-
 .logo {
     padding: 10px;
     margin: auto;

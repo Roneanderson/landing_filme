@@ -26,6 +26,10 @@
         display: flex;
         justify-content: space-between;
         background-color: rgb(10, 9, 9);
+
+        @media (max-width: 768px) {
+            padding: 0;
+        }
     }
 
     &__logo {
@@ -33,6 +37,12 @@
         width: 100%;
         margin: 5px;
         transition: opacity .5s ease;
+
+        @media (max-width: 768px) {
+            margin: 0 auto;
+            margin-bottom: 8px;
+            padding-top: 10px;
+        }
     }
 
     &__linkss{
@@ -43,5 +53,19 @@
             transition: opacity .5s ease;
         }
     }
+
+
+    .btn {
+        @media (max-width: 768px) {
+            font-size: 13px;
+            height: 40px;
+            padding: 0 32px;
+            margin-top: 10px;
+            justify-content: space-between;
+            letter-spacing: 0;
+        }
+    }
+    
+    
 }
 

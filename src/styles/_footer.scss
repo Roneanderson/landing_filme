@@ -2,6 +2,8 @@
 
 .footer {
     background-color: variaveis.$corDeFundo;
+
+
     &__container {
         max-width: 1524px;
         width: 100%;
@@ -33,6 +35,11 @@
             a {
                 text-decoration: none;
                 padding: 8px 8px;
+
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                    line-height: 22px;
+                }
                 
                 &:hover {
                     color: variaveis.$corDeFundoBotaoSecundario;
@@ -43,6 +50,11 @@
 
     p {
         margin-top: 8px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+            line-height: 22px;
+        }
     }
 }
 
