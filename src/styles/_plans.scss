@@ -10,7 +10,6 @@
         padding: 56px 0 12px;
         align-content: center;
 
-
         &__content {
             max-width: 341px;
             min-width: 100px;
@@ -71,10 +70,4 @@
     padding: 20px 0;
     letter-spacing: 1.4;
     padding-bottom: 80px;
-
-    
-    @media (max-width: 767px) {
-        display: block;
-        font-size: 30px;
-    }
 }

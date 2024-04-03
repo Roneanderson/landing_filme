@@ -5,6 +5,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    @media (max-width: 767px) {
+        display: block;
+        background-color: green;
+    }
     
     &__sobre {
         margin: 5px;

@@ -1,6 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     $(document).ready(function() {
-        $('.carousel').slick();
+        $('.carousel').slick({
+            speed: 700,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        infinite: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                }
+            ]
+        });
     })
 
     //seção do header
@@ -28,7 +43,3 @@ document.addEventListener('DOMContentLoaded', function() {
         header.classList.remove('header--is-hidden');
     }
 })
-
-
-
-
