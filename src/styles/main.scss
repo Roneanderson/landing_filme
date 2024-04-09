@@ -22,6 +22,10 @@
     list-style: none;
 }
 
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
 /* estilização dos mixin */
 @mixin text($fontSize: 18px) {
     font-size: $fontSize;
